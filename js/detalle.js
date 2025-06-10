@@ -46,8 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const todosLosTurnos = [
                     "10:00", "10:30", "11:00", "11:30",
                     "12:00", "12:30", "13:00", "13:30",
-                    "14:00", "14:30", "15:00", "16:30",
-                    "21:30",
+                    "14:00", "14:30", "15:00",
                 ];
                 console.log(reservas)
                 const turnosReservados = (reservas.productTimes || []).map(t => {
