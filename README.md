@@ -40,12 +40,6 @@ Este proyecto es un **trabajo práctico universitario** para la materia de Full 
 
 ---
 
-## Autores
-
-- Matías Moran
-
----
-
 ## Notas
 
 - Este proyecto es solo para fines académicos.
