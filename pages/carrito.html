@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script defer src="../js/carrito.js"></script>
+    <title>Carrito de Reservas</title>
+</head>
+<body>
+    <header class="flex items-center justify-between px-8 shadow mb-8">
+        <div class="marca flex items-center gap-4">
+            <img src="../images/logo.webp" width="120" height="120"/>
+            <h1 class="nombre text-2xl font-bold">AcquaSport</h1>
+        </div>
+        <nav>
+            <ul class="menu-lista flex gap-4">
+                <li>
+                    <a href="../index.html" class="menu-boton px-4 py-2 rounded bg-emerald-500 text-white hover:bg-emerald-600">Inicio</a>
+                </li>
+                <li>
+                    <a href="buscarReserva.html" class="menu-boton px-4 py-2 rounded bg-emerald-500 text-white hover:bg-emerald-600">Buscar reserva</a>
+                </li>
+                <li>
+                    <a href="carrito.html" class="menu-boton px-4 py-2 rounded bg-emerald-500 text-white hover:bg-emerald-600">Carrito</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container mx-auto my-8">
+        <h1 class="text-3xl mb-4 text-center">Carrito de Reservas</h1>
+        <div id="lista-carrito" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+
+        <form id="cliente-form" class="space-y-3 bg-white rounded shadow p-4 mt-8 hidden w-full md:w-1/2 mx-auto">
+            <h2 class="text-xl font-bold mb-2">Datos del cliente</h2>
+            <div>
+                <label class="block">Nombre:</label>
+                <input type="text" name="name" required class="border rounded px-2 py-1 w-full">
+            </div>
+            <div>
+                <label class="block">Email:</label>
+                <input type="email" name="email" required class="border rounded px-2 py-1 w-full">
+            </div>
+            <div>
+                <label class="block">Teléfono:</label>
+                <input type="text" name="phone" required class="border rounded px-2 py-1 w-full">
+            </div>
+            <div>
+                <label class="block">DNI/Pasaporte:</label>
+                <input type="text" name="idNumber" required class="border rounded px-2 py-1 w-full">
+            </div>
+            <div>
+                <label class="block">Método de pago:</label>
+                <select name="paymentMethod" class="border rounded px-2 py-1 w-full">
+                    <option value="efectivo_local">Efectivo local</option>
+                    <option value="efectivo_extranjero">Efectivo extranjero</option>
+                    <option value="tarjeta">Tarjeta</option>
+                </select>
+            </div>
+                <div>
+                <label class="block">Monto total:</label>
+                <input type="text" id="monto-total" readonly class="border rounded px-2 py-1 w-full bg-gray-100">
+            </div>
+            <button type="submit" class="bg-emerald-500 text-white px-4 py-2 rounded hover:bg-emerald-600">Confirmar reservas</button>
+        </form>
+        <div id="mensaje-final" class="text-center mt-4"></div>
+    </div>
+    
+</body>
+</html>

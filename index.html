@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <script src="js/index.js"></script>
+        <title>AcquSport</title>
+    </head>
+    <body>
+        <!-- Barra de navegacion -->
+        <header class="flex items-center justify-between px-8 shadow">
+
+                <div class="marca flex items-center gap-4">
+                    <img src="images/logo.webp" width="120" height="120"/>
+                    <h1 class="nombre text-2xl font-bold">AcquaSport</h1>
+                </div>
+                <nav>
+                    <ul class="menu-lista flex gap-4">
+                        <li>
+                            <a href="index.html" class="menu-boton px-4 py-2 rounded bg-emerald-500 text-white hover:bg-emerald-600">Inicio</a>
+                        </li>
+                        <li>
+                            <a href="pages/buscarReserva.html" class="menu-boton px-4 py-2 rounded bg-emerald-500 text-white hover:bg-emerald-600">Buscar reserva</a>
+                        </li>
+                        <li>
+                            <a href="pages/carrito.html" class="menu-boton px-4 py-2 rounded bg-emerald-500 text-white hover:bg-emerald-600">Carrito</a>
+                        </li>
+                    </ul>
+                </nav>
+        </header>
+
+        <!-- Presentacion de los prouctos -->
+        <div class="container mx-auto my-8">
+            <h1 class="text-3xl mb-4 text-center">Divisiones de productos</h1>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                <!-- Cuatriciclos -->
+                <a href="pages/cuatriciclos.html" class="bg-white rounded shadow p-4 flex flex-col items-center hover:shadow-lg group cursor-pointer">
+                    <img src="images/cuatri1.webp" alt="Cuatriciclos" class="object-cover mb-2 rounded">
+                    <h2 class="text-lg font-bold mb-1 transition group-hover:underline">Cuatriciclos</h2>
+                    <p class="text-gray-600 mb-1">Vehículos todo terreno para aventura.</p>
+                    <h3 class="font-bold">150</h3>
+                </a>
+                <!-- Jetsky -->
+                <a href="pages/jetsky.html" class="bg-white rounded shadow p-4 flex flex-col items-center hover:shadow-lg group cursor-pointer">
+                    <img src="images/jetsky1.webp" alt="Jetsky" class="object-cover mb-2 rounded">
+                    <h2 class="text-lg font-bold mb-1 group-hover:underline">Jetsky</h2>
+                    <p class="text-gray-600 mb-1">Motos de agua para diversión acuática.</p>
+                </a>
+                <!-- Equipo de buceo -->
+                <a href="pages/buceo.html" class="bg-white rounded shadow p-4 flex flex-col items-center hover:shadow-lg group cursor-pointer">
+                    <img src="images/buceo1.webp" alt="Equipo de buceo" class="object-cover mb-2 rounded">
+                    <h2 class="text-lg font-bold mb-1 group-hover:underline">Equipo de buceo</h2>
+                    <p class="text-gray-600 mb-1">Todo lo necesario para explorar bajo el agua.</p>
+                </a>
+                <!-- Tabla de surf grande -->
+                <a href="pages/tablaGrande.html" class="bg-white rounded shadow p-4 flex flex-col items-center hover:shadow-lg group cursor-pointer">
+                    <img src="images/surfg1.webp" alt="Tabla de surf grande" class="object-cover mb-2 rounded">
+                    <h2 class="text-lg font-bold mb-1 group-hover:underline">Tabla de surf grande</h2>
+                    <p class="text-gray-600 mb-1">Tablas para surfistas de todos los niveles.</p>
+                </a>
+                <!-- Tabla de surf chica -->
+                <a href="pages/tablaChica.html" class="bg-white rounded shadow p-4 flex flex-col items-center hover:shadow-lg group cursor-pointer">
+                    <img src="images/surfn1.webp" alt="Tabla de surf chica" class="object-cover mb-2 rounded">
+                    <h2 class="text-lg font-bold mb-1 group-hover:underline">Tabla de surf chica</h2>
+                    <p class="text-gray-600 mb-1">Tablas pequeñas para maniobras rápidas.</p>
+                </a>
+            </div>
+        </div>
+    </body>
+</html>

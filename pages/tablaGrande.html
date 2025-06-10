@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <script defer src="../js/tablaGrande.js"></script>
+        <title>AcquSport</title>
+    </head>
+    <body>
+    <!-- Barra de navegacion -->
+    <header class="flex items-center justify-between px-8 shadow">
+
+            <div class="marca flex items-center gap-4">
+                <img src="../images/logo.webp" width="120" height="120"/>
+                <h1 class="nombre text-2xl font-bold">AcquaSport</h1>
+            </div>
+            <nav>
+                <ul class="menu-lista flex gap-4">
+                    <li>
+                        <a href="../index.html" class="menu-boton px-4 py-2 rounded bg-emerald-500 text-white hover:bg-emerald-600">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="buscarReserva.html" class="menu-boton px-4 py-2 rounded bg-emerald-500 text-white hover:bg-emerald-600">Buscar reserva</a>
+                    </li>
+                    <li>
+                        <a href="carrito.html" class="menu-boton px-4 py-2 rounded bg-emerald-500 text-white hover:bg-emerald-600">Carrito</a>
+                    </li>
+                </ul>
+            </nav>
+    </header>
+
+    <!-- Presentacion de los prouctos -->
+    <div class="container mx-auto my-8">
+        <h1 class="text-3xl mb-4 text-center">Tablas de surf para adultos</h1>
+        <div id="lista-tablaGrande" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"></div>
+    </div>
+ 
+    </body>
+</html>
