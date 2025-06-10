@@ -52,24 +52,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.log(reservas)
                 const turnosReservados = (reservas.productTimes || []).map(t => {
                     const date = new Date(t);
-                    date.setHours(date.getHours() - 3);
-                    console.log(date)
-                    return date.toISOString().substr(11, 5);
+                    // Obtener la hora local en formato HH:mm
+                    const hh = date.getHours().toString().padStart(2, '0');
+                    const mm = date.getMinutes().toString().padStart(2, '0');
+                    return `${hh}:${mm}`;
                 });
-                const turnosDisponibles = todosLosTurnos.filter(hora => !turnosReservados.includes(hora));
-                
+
+                let turnosDisponibles = todosLosTurnos.filter(hora => !turnosReservados.includes(hora));
+
                 // Ocultar horarios pasados si la fecha seleccionada es hoy
                 const hoyStr = new Date().toISOString().slice(0, 10);
                 if (fecha === hoyStr) {
                     const ahora = new Date();
-                    //const minutosAhora = ahora.getHours() * 60 + ahora.getMinutes();
-
-                    // turnosDisponibles = turnosDisponibles.filter(hora => {
-                    //     const [h, m] = hora.split(':').map(Number);
-                    //     const minutosTurno = h * 60 + m;
-                    //     return minutosTurno > minutosAhora;
-                    // });
-                    // console.log(turnosDisponibles)
+                    const minutosAhora = ahora.getHours() * 60 + ahora.getMinutes();
+                    turnosDisponibles = turnosDisponibles.filter(hora => {
+                        const [h, m] = hora.split(':').map(Number);
+                        const minutosTurno = h * 60 + m;
+                        return minutosTurno > minutosAhora;
+                    });
                 }
 
                 const horariosDiv = document.getElementById('horarios-disponibles');
@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     };
                     const persons = parseInt(formData.get('persons'), 10);
                     const fechaSeleccionada = new Date(`${fecha}T${horarioSeleccionado}:00`);
-                    // Ajusta el offset según tu zona horaria (Argentina: UTC-3)
+                    
                     fechaSeleccionada.setHours(fechaSeleccionada.getHours()-3);
                     const startTime = fechaSeleccionada.toISOString().slice(0, 19);
                     const totalAmount = producto.pricePerTurn  + (producto.requiresSafetyDevices ? (producto.safetyDevicesPrice || 0) * persons : 0);
