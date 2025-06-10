@@ -22,12 +22,6 @@ Este proyecto es un **trabajo práctico universitario** para la materia de Full 
 
 ---
 
-## Estructura del proyecto
-
-tpFront/ │ ├── admin/ │ ├── adminPanel.html │ └── admin.js │ ├── js/ │ ├── carrito.js │ ├── buscarReserva.js │ ├── detalle.js │ └── tablaGrande.js │ ├── pages/ │ ├── carrito.html │ ├── buscarReserva.html │ ├── loginAdmin.html │ └── tablaGrande.html │ ├── images/ │ └── logo.webp │ └── index.html
-
-
----
 
 ## Instalación y ejecución
 
